@@ -1,15 +1,42 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="?attr/actionBarSize"
     android:fitsSystemWindows="true"
+    android:orientation="vertical"
     android:padding="16dp"
     tools:context="uio.androidbootcamp.fragmentsdrawer.PokemonFragment">
 
     <TextView
+        android:id="@+id/text_view_bulbasaur"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/pokemon" />
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_bulbasaur"
+        android:gravity="center|start"
+        android:text="@string/bulbasaur" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/text_view_charmander"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_charmander"
+        android:gravity="center|start"
+        android:text="@string/charmander" />
+
+    <TextView
+        android:id="@+id/text_view_pikachu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_pikachu"
+        android:gravity="center|start"
+        android:text="@string/pikachu" />
+
+    <TextView
+        android:id="@+id/text_view_squirtle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_squirtle"
+        android:gravity="center|start"
+        android:text="@string/squirtle" />
+</LinearLayout>

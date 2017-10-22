@@ -96,6 +96,6 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onPokemonClicked(String pokemon) {
-
+        Toast.makeText(this, pokemon, Toast.LENGTH_LONG).show();
     }
 }

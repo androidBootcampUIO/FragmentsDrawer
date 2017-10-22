@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 public class PokemonFragment extends Fragment {
@@ -26,7 +27,28 @@ public class PokemonFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_pokemon, container, false);
+        View view = inflater.inflate(R.layout.fragment_pokemon, container, false);
+
+        TextView bulbasaurTextView = view.findViewById(R.id.text_view_bulbasaur);
+        TextView charmanderTextView = view.findViewById(R.id.text_view_charmander);
+        TextView pikachuTextView = view.findViewById(R.id.text_view_pikachu);
+        TextView squirtleTextView = view.findViewById(R.id.text_view_squirtle);
+
+        setOnClick(bulbasaurTextView, "bulbasaur");
+        setOnClick(charmanderTextView, "charmander");
+        setOnClick(pikachuTextView, "pikachu");
+        setOnClick(squirtleTextView, "squirtle");
+
+        return view;
+    }
+
+    private void setOnClick(TextView textView, final String pokemon) {
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onPokemonClicked(pokemon);
+            }
+        });
     }
 
     public void onPokemonClicked(String pokemon) {
