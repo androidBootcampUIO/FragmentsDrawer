@@ -2,6 +2,7 @@ package uio.androidbootcamp.fragmentsdrawer;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -15,7 +16,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener,
-        PokemonFragment.OnPokemonFragmentInteractionListener {
+        PokemonFragment.OnPokemonFragmentInteractionListener,
+        StarWarsFragment.OnStarWarsFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +29,13 @@ public class MainActivity extends AppCompatActivity implements
         navigationViewSetup();
 
         PokemonFragment pokemonFragment = PokemonFragment.newInstance();
+        showFragment(pokemonFragment);
+    }
+
+    private void showFragment(Fragment fragment) {
         FragmentManager fragmentManager = this.getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, pokemonFragment);
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
     }
 
@@ -85,8 +91,12 @@ public class MainActivity extends AppCompatActivity implements
 
         if (id == R.id.nav_pokemon) {
             Toast.makeText(this, R.string.pokemon, Toast.LENGTH_LONG).show();
+            PokemonFragment pokemonFragment = PokemonFragment.newInstance();
+            showFragment(pokemonFragment);
         } else if (id == R.id.nav_star_wars) {
             Toast.makeText(this, R.string.star_wars, Toast.LENGTH_LONG).show();
+            StarWarsFragment starWarsFragment = StarWarsFragment.newInstance();
+            showFragment(starWarsFragment);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -97,5 +107,10 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onPokemonClicked(String pokemon) {
         Toast.makeText(this, pokemon, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onDroidClicked(String droid) {
+        Toast.makeText(this, droid, Toast.LENGTH_LONG).show();
     }
 }
