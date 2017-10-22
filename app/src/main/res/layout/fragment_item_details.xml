@@ -6,10 +6,10 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="uio.androidbootcamp.fragmentsdrawer.DroidDetailsFragment">
+    tools:context="uio.androidbootcamp.fragmentsdrawer.ItemDetailsFragment">
 
     <TextView
-        android:id="@+id/text_view_droid_name"
+        android:id="@+id/text_view_item_name"
         style="@android:style/TextAppearance.Material.Large"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:textAlignment="center" />
 
     <TextView
-        android:id="@+id/text_view_droid_description"
+        android:id="@+id/text_view_item_description"
         style="@android:style/TextAppearance.Material.Small"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -14,8 +14,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import static uio.androidbootcamp.fragmentsdrawer.R.id.nav_pokemon;
-
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener,
         PokemonFragment.OnPokemonFragmentInteractionListener,
@@ -103,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements
         if (id == R.id.nav_pokemon) {
             Toast.makeText(this, R.string.pokemon, Toast.LENGTH_LONG).show();
             PokemonFragment pokemonFragment = PokemonFragment.newInstance();
-            showFragment(pokemonFragment, "pokemon");
+            showFragment(pokemonFragment, "pokemons");
         } else if (id == R.id.nav_star_wars) {
             Toast.makeText(this, R.string.star_wars, Toast.LENGTH_LONG).show();
             StarWarsFragment starWarsFragment = StarWarsFragment.newInstance();
@@ -118,12 +116,14 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onPokemonClicked(String pokemon) {
         Toast.makeText(this, pokemon, Toast.LENGTH_LONG).show();
+        ItemDetailsFragment itemDetailsFragment = ItemDetailsFragment.newInstance(pokemon, R.id.nav_pokemon);
+        showFragment(itemDetailsFragment, "pokemon");
     }
 
     @Override
     public void onDroidClicked(String droid) {
         Toast.makeText(this, droid, Toast.LENGTH_LONG).show();
-        DroidDetailsFragment droidDetailsFragment = DroidDetailsFragment.newInstance(droid);
-        showFragment(droidDetailsFragment, "droid");
+        ItemDetailsFragment itemDetailsFragment = ItemDetailsFragment.newInstance(droid, R.id.nav_star_wars);
+        showFragment(itemDetailsFragment, "droid");
     }
 }

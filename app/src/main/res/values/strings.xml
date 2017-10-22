@@ -11,16 +11,19 @@
     <string name="bb9e_descripcion">The First Order benefits from the latest technology across all its activities. This includes having dark, gleaming BB astromech units of their own that keep their starships and machinery operational.</string>
 
     <string name="bulbasaur">Bulbasaur</string>
+    <string name="bulbasaur_descripcion">Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun\'s rays, the seed grows progressively larger.</string>
 
     <string name="c3po">C-3PO</string>
     <string name="c3po_descripcion">C-3PO is a droid programmed for etiquette and protocol, built by the heroic Jedi Anakin Skywalker, and a constant companion to astromech R2-D2. Over the years, he was involved in some of the galaxy’s most defining moments and thrilling battles — and is fluent in more than seven million forms of communication. In the years after the Empire\'s defeat, C-3PO acquired a red-plated arm, keeping the mismatched limb to honor a fellow droid\'s sacrifice.</string>
 
     <string name="charmander">Charmander</string>
+    <string name="charmander_descripcion">The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.</string>
 
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
 
     <string name="pikachu">Pikachu</string>
+    <string name="pikachu_descripcion">This Pokémon has electricity-storing pouches on its cheeks. These appear to become electrically charged during the night while Pikachu sleeps. It occasionally discharges electricity when it is dozy after waking up.</string>
 
     <string name="pokemon">Pokemon</string>
 
@@ -28,6 +31,7 @@
     <string name="r2d2_descripcion">A resourceful astromech droid, R2-D2 served Padmé Amidala, Anakin Skywalker and Luke Skywalker in turn, showing great bravery in rescuing his masters and their friends from many perils. A skilled starship mechanic and fighter pilot\'s assistant, he formed an unlikely but enduring friendship with the fussy protocol droid C-3PO.</string>
 
     <string name="squirtle">Squirtle</string>
+    <string name="squirtle_descripcion">Squirtle\'s shell is not merely used for protection. The shell\'s rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.</string>
 
     <string name="star_wars">Star Wars</string>
 </resources>
