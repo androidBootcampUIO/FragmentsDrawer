@@ -112,5 +112,7 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onDroidClicked(String droid) {
         Toast.makeText(this, droid, Toast.LENGTH_LONG).show();
+        DroidDetailsFragment droidDetailsFragment = DroidDetailsFragment.newInstance(droid);
+        showFragment(droidDetailsFragment);
     }
 }
