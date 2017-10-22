@@ -2,6 +2,8 @@ package uio.androidbootcamp.fragmentsdrawer;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,8 +13,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener,
+        PokemonFragment.OnPokemonFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,12 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = toolbarSetup();
         drawerSetup(toolbar);
         navigationViewSetup();
+
+        PokemonFragment pokemonFragment = PokemonFragment.newInstance();
+        FragmentManager fragmentManager = this.getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, pokemonFragment);
+        fragmentTransaction.commit();
     }
 
     private void navigationViewSetup() {
@@ -83,5 +92,10 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onPokemonClicked(String pokemon) {
+
     }
 }
