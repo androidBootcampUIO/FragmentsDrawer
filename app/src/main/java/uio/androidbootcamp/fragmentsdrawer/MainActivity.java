@@ -29,13 +29,16 @@ public class MainActivity extends AppCompatActivity implements
         navigationViewSetup();
 
         PokemonFragment pokemonFragment = PokemonFragment.newInstance();
-        showFragment(pokemonFragment);
+        showFragment(pokemonFragment, null);
     }
 
-    private void showFragment(Fragment fragment) {
+    private void showFragment(Fragment fragment, String tag) {
         FragmentManager fragmentManager = this.getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, fragment);
+        if (tag != null) {
+            fragmentTransaction.addToBackStack(tag);
+        }
         fragmentTransaction.commit();
     }
 
@@ -92,11 +95,11 @@ public class MainActivity extends AppCompatActivity implements
         if (id == R.id.nav_pokemon) {
             Toast.makeText(this, R.string.pokemon, Toast.LENGTH_LONG).show();
             PokemonFragment pokemonFragment = PokemonFragment.newInstance();
-            showFragment(pokemonFragment);
+            showFragment(pokemonFragment, "pokemon");
         } else if (id == R.id.nav_star_wars) {
             Toast.makeText(this, R.string.star_wars, Toast.LENGTH_LONG).show();
             StarWarsFragment starWarsFragment = StarWarsFragment.newInstance();
-            showFragment(starWarsFragment);
+            showFragment(starWarsFragment, "starWars");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -113,6 +116,6 @@ public class MainActivity extends AppCompatActivity implements
     public void onDroidClicked(String droid) {
         Toast.makeText(this, droid, Toast.LENGTH_LONG).show();
         DroidDetailsFragment droidDetailsFragment = DroidDetailsFragment.newInstance(droid);
-        showFragment(droidDetailsFragment);
+        showFragment(droidDetailsFragment, "droid");
     }
 }
