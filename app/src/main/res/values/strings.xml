@@ -11,4 +11,8 @@
     <string name="bulbasaur">Bulbasaur</string>
     <string name="charmander">Charmander</string>
     <string name="squirtle">Squirtle</string>
+    <string name="bb8">BB-8</string>
+    <string name="bb9e">BB-9E</string>
+    <string name="c3po">C-3PO</string>
+    <string name="r2d2">R2-D2</string>
 </resources>

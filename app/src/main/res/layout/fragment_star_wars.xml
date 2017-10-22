@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="uio.androidbootcamp.fragmentsdrawer.PokemonFragment">
+
+    <TextView
+        android:id="@+id/text_view_bb8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_bb8"
+        android:gravity="center|start"
+        android:text="@string/bb8" />
+
+    <TextView
+        android:id="@+id/text_view_bb9e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_bb9e"
+        android:gravity="center|start"
+        android:text="@string/bb9e" />
+
+    <TextView
+        android:id="@+id/text_view_c3po"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_c3po"
+        android:gravity="center|start"
+        android:text="@string/c3po" />
+
+    <TextView
+        android:id="@+id/text_view_r2d2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_r2d2"
+        android:gravity="center|start"
+        android:text="@string/r2d2" />
+</LinearLayout>
