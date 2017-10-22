@@ -1,18 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+    <string name="action_settings">Settings</string>
+
     <string name="app_name">FragmentsDrawer</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_settings">Settings</string>
-    <string name="pokemon">Pokemon</string>
-    <string name="star_wars">Star Wars</string>
-    <string name="pikachu">Pikachu</string>
-    <string name="bulbasaur">Bulbasaur</string>
-    <string name="charmander">Charmander</string>
-    <string name="squirtle">Squirtle</string>
     <string name="bb8">BB-8</string>
+    <string name="bb8_descripcion">A skittish but loyal astromech, BB-8 accompanied Poe Dameron on many missions for the Resistance, helping keep his X-wing in working order. When Poe\’s mission to Jakku ended with his capture by the First Order, BB-8 fled into the desert with a vital clue to the location of Jedi Master Luke Skywalker.</string>
+
     <string name="bb9e">BB-9E</string>
+    <string name="bb9e_descripcion">The First Order benefits from the latest technology across all its activities. This includes having dark, gleaming BB astromech units of their own that keep their starships and machinery operational.</string>
+
+    <string name="bulbasaur">Bulbasaur</string>
+
     <string name="c3po">C-3PO</string>
+    <string name="c3po_descripcion">C-3PO is a droid programmed for etiquette and protocol, built by the heroic Jedi Anakin Skywalker, and a constant companion to astromech R2-D2. Over the years, he was involved in some of the galaxy’s most defining moments and thrilling battles — and is fluent in more than seven million forms of communication. In the years after the Empire\'s defeat, C-3PO acquired a red-plated arm, keeping the mismatched limb to honor a fellow droid\'s sacrifice.</string>
+
+    <string name="charmander">Charmander</string>
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    <string name="pikachu">Pikachu</string>
+
+    <string name="pokemon">Pokemon</string>
+
     <string name="r2d2">R2-D2</string>
+    <string name="r2d2_descripcion">A resourceful astromech droid, R2-D2 served Padmé Amidala, Anakin Skywalker and Luke Skywalker in turn, showing great bravery in rescuing his masters and their friends from many perils. A skilled starship mechanic and fighter pilot\'s assistant, he formed an unlikely but enduring friendship with the fussy protocol droid C-3PO.</string>
+
+    <string name="squirtle">Squirtle</string>
+
+    <string name="star_wars">Star Wars</string>
 </resources>
