@@ -76,4 +76,11 @@ public class DroidDetailsFragment extends Fragment {
         return droidsNames.get(droidId);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        MainActivity activity = (MainActivity) getActivity();
+        activity.setSelectedDrawerItem(R.id.nav_star_wars);
+    }
+
 }

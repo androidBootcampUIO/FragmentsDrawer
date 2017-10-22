@@ -77,4 +77,11 @@ public class PokemonFragment extends Fragment {
     public interface OnPokemonFragmentInteractionListener {
         void onPokemonClicked(String pokemon);
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MainActivity activity = (MainActivity) getActivity();
+        activity.setSelectedDrawerItem(R.id.nav_pokemon);
+    }
 }

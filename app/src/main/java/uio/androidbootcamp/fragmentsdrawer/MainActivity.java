@@ -14,10 +14,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import static uio.androidbootcamp.fragmentsdrawer.R.id.nav_pokemon;
+
 public class MainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener,
         PokemonFragment.OnPokemonFragmentInteractionListener,
         StarWarsFragment.OnStarWarsFragmentInteractionListener {
+
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     private void navigationViewSetup() {
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -59,6 +63,10 @@ public class MainActivity extends AppCompatActivity implements
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         return toolbar;
+    }
+
+    public void setSelectedDrawerItem(int item) {
+        navigationView.setCheckedItem(item);
     }
 
     @Override

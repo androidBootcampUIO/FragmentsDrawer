@@ -77,4 +77,11 @@ public class StarWarsFragment extends Fragment {
     public interface OnStarWarsFragmentInteractionListener {
         void onDroidClicked(String droid);
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MainActivity activity = (MainActivity) getActivity();
+        activity.setSelectedDrawerItem(R.id.nav_star_wars);
+    }
 }
